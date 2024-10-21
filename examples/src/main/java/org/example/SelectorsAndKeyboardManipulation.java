@@ -26,7 +26,7 @@ public class SelectorsAndKeyboardManipulation {
       BrowserContext context = browser.newContext();
       Page page = context.newPage();
       page.navigate("https://playwright.dev/java/");
-      page.locator("text=SearchK").click();
+      page.locator("text=Search").click();
       page.locator("[placeholder=\"Search docs\"]").fill("getting started");
       page.locator("div[role=\"button\"]:has-text(\"CancelIntroductionGetting startedInstallation​Getting startedUsage​Getting start\")").click();
       page.waitForSelector("h1:has-text(\"Getting started\")"); // Waits for the new page to load before screenshotting.
